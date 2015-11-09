@@ -25,13 +25,13 @@ def run(fpi, fpo):
 
             continue
 
-        if skip_next_line:
-            skip_next_line = False
-            continue
-
         if line.lstrip().startswith(FLAG_REPLACE):
             line = line.replace(FLAG_REPLACE, "", 1)
             skip_next_line = True
+
+        elif skip_next_line:
+            skip_next_line = False
+            continue
 
         elif FLAG_PREPEND in line:
             line, prepend = line.split(FLAG_PREPEND, 1)
