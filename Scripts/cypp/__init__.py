@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
-from __future__ import division
-from __future__ import print_function
+from __future__ import unicode_literals, division, print_function, absolute_import
 
 
 __version_info__ = (0, 1, 1)
